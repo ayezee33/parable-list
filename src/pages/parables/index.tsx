@@ -5,7 +5,7 @@ import { getAllParables } from '@/utils/mdx'
 import { Parable } from '@/types/Parable'
 import ParableFilters from '@/components/ParableFilters'
 import { BookOpenIcon, SparklesIcon } from '@heroicons/react/24/outline'
-
+import MailerLiteForm from '@/components/MailerLiteForm'
 interface ParablesPageProps {
   parables: Parable[]
   categories: string[]
@@ -104,7 +104,7 @@ export default function ParablesPage({ parables, categories, testaments }: Parab
           <p className="text-xl text-white/80 mb-8">
             Drop your email below to receive a new parable each week.
           </p>
-          <div className  ="ml-embedded" data-form="9szPSZ"></div>
+          <MailerLiteForm />
         </div>
       </section>
       </div>

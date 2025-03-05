@@ -5,7 +5,7 @@ import { getAllParables, getParableById } from '@/utils/mdx'
 import { Parable } from '@/types/Parable'
 import Link from 'next/link'
 import { BookOpenIcon, SparklesIcon, LightBulbIcon, HeartIcon, ArrowLeftIcon } from '@heroicons/react/24/outline'
-
+import MailerLiteForm from '@/components/MailerLiteForm'
 interface ParablePageProps {
   parable: Parable
 }
@@ -130,7 +130,7 @@ export default function ParablePage({ parable }: ParablePageProps) {
           <p className="text-xl text-white/80 mb-8">
             Drop your email below to receive a new parable each week.
           </p>
-          <div className  ="ml-embedded" data-form="9szPSZ"></div>
+          <MailerLiteForm />
         </div>
       </section>
       </div>
