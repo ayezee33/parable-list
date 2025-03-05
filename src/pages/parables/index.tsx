@@ -96,6 +96,17 @@ export default function ParablesPage({ parables, categories, testaments }: Parab
             </Link>
           ))}
         </div>
+        <section className="bg-wine-900 py-24 mt-24 rounded-xl">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-serif font-bold text-white mb-8">
+            Get Weekly Encouragement & Insights Via Parables
+          </h2>
+          <p className="text-xl text-white/80 mb-8">
+            Drop your email below to receive a new parable each week.
+          </p>
+          <div className  ="ml-embedded" data-form="9szPSZ"></div>
+        </div>
+      </section>
       </div>
     </div>
   )
