@@ -105,6 +105,7 @@ export default function Home({ featuredParables }: HomeProps) {
           <p className="text-xl text-white/80 mb-8">
             Drop your email below to receive a new parable each week.
           </p>
+          <div className="ml-embedded" data-form="9szPSZ"></div>
         </div>
       </section>
     </div>
