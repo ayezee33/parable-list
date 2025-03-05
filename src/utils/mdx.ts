@@ -98,6 +98,9 @@ export function getAllParables(): Parable[] {
       const fileContent = fs.readFileSync(filePath, 'utf8')
       const { data, content } = matter(fileContent)
 
+      // Ensure id exists by using filename if not provided in frontmatter
+      const id = data.id || filename.replace('.mdx', '')
+      
       // Ensure categories is always an array
       const categories = Array.isArray(data.categories) ? data.categories : []
 
@@ -110,6 +113,7 @@ export function getAllParables(): Parable[] {
 
       parables.push({
         ...data,
+        id, // Use our guaranteed id
         categories,
         bibleReference,
         biblicalText: extractSectionContent(content, 'Biblical Text'),

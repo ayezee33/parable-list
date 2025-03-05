@@ -127,36 +127,35 @@ export default function ParablePage({ parable }: ParablePageProps) {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export async function getStaticPaths() {
   const parables = getAllParables()
   
-  const paths = parables.map((parable) => ({
+  const paths = parables.map(parable => ({
     params: {
       testament: `${parable.testament}-testament`,
-      id: parable.id,
-    },
+      id: parable.id || '' // Ensure id is never undefined
+    }
   }))
 
   return {
     paths,
-    fallback: false,
+    fallback: false
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id = params?.id as string
-  const parable = getParableById(id)
-
+export async function getStaticProps({ params }: { params: { testament: string; id: string } }) {
+  const parable = getParableById(params.id)
+  
   if (!parable) {
     return {
-      notFound: true,
+      notFound: true
     }
   }
 
   return {
     props: {
-      parable,
-    },
+      parable
+    }
   }
 }
 
