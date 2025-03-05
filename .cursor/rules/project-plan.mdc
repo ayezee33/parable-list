@@ -1,0 +1,174 @@
+---
+description: How we will build this project
+globs: 
+---
+
+## Project Overview
+
+- **Name**: Biblical Parables Insights
+- **Purpose**: Create a comprehensive, static-generated website showcasing biblical parables with in-depth analysis
+
+## Technical Stack
+
+- **Framework**: Next.js (React-based)
+- **Styling**: Tailwind CSS
+- **Deployment**: GitHub Pages
+- **Content Management**: MDX files
+- **Search**: Lunr.js
+- **Newsletter Integration**: Beehiiv Embed
+
+## System Architecture
+
+### 1. Content Structure
+
+### Content Types
+
+- **Parables**
+    - Unique identifier
+    - Title
+    - Bible reference (book, chapter, verse)
+    - Full text
+    - Categories
+    - Tags
+    - Theological interpretation
+    - Practical applications
+    - Key takeaways
+
+### Metadata Schemas
+
+- Frontmatter in MDX files
+- Structured JSON for parsing
+- Consistent naming conventions
+
+### 2. File Organization
+
+```
+Copy
+/
+├── content/
+│   ├── parables/
+│   │   ├── old-testament/
+│   │   └── new-testament/
+│   └── categories/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+├── public/
+│   └── images/
+
+```
+
+### 3. Page Types
+
+1. **Home Page**
+    - Featured parables
+    - Random parable of the day
+    - Newsletter signup
+    - Quick navigation
+2. **Parable Listing Pages**
+    - Old Testament parables
+    - New Testament parables
+    - Filterable and searchable
+3. **Individual Parable Pages**
+    - Full parable text
+    - Bible reference
+    - Theological insights
+    - Practical applications
+    - Related parables
+    - Category and tag links
+4. **Category Pages**
+    - List parables by category
+    - Theological themes
+    - Interconnected insights
+
+### 4. Features
+
+- Responsive design
+- Dark/light mode
+- Client-side search
+- Newsletter signup (Beehiiv)
+- Social share buttons
+- Bible verse hover/popup
+- Daily parable randomizer
+
+### 5. Performance Considerations
+
+- Static site generation
+- Optimized images
+- Minimal JavaScript
+- Tailwind CSS for efficient styling
+- Lunr.js for lightweight search
+
+### 6. SEO Optimization
+
+- Semantic HTML
+- Metadata for each page
+- Open Graph tags
+- Sitemap generation
+- Structured data markup
+
+### 7. Deployment Pipeline
+
+- GitHub Actions for CI/CD
+- Automated builds
+- Deployment to GitHub Pages
+- Custom domain support
+
+## Development Milestones
+
+1. Project Setup
+    - Next.js installation
+    - Tailwind CSS configuration
+    - Basic page structure
+2. Content Management
+    - MDX parsing
+    - Parable content creation
+    - Metadata standardization
+3. Page Development
+    - Home page
+    - Parable listing pages
+    - Individual parable pages
+    - Category pages
+4. Feature Implementation
+    - Search functionality
+    - Dark/light mode
+    - Newsletter integration
+    - Related parables logic
+5. Performance & SEO
+    - Optimization
+    - Testing
+    - Metadata implementation
+6. Deployment
+    - GitHub Actions setup
+    - GitHub Pages configuration
+    - Domain mapping
+
+## Technical Requirements
+
+- Node.js 18+
+- Next.js 13+
+- React 18+
+- Tailwind CSS
+- MDX
+- Lunr.js
+- Gray-matter (for frontmatter parsing)
+
+## Third-Party Integrations
+
+- Beehiiv (Newsletter)
+- Possible future: Disqus (Comments)
+
+## Accessibility & Compliance
+
+- WCAG 2.1 AA compliance
+- Semantic HTML
+- Keyboard navigation
+- Screen reader support
+
+## Security Considerations
+
+- No server-side authentication
+- Static content only
+- Client-side interactions
