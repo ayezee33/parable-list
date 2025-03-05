@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
+  basePath: '/parable-list', // Replace REPO-NAME with your repository name
   // Comment out basePath for local development
   // basePath: '/parablelist'
 }
