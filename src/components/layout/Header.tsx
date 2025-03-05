@@ -1,11 +1,32 @@
 import Link from 'next/link';
 import { BookOpenIcon } from '@heroicons/react/24/outline'
 import Script from 'next/script'
+import { useEffect } from 'react'
 
 export default function Header() {
+  useEffect(() => {
+    // Reinitialize MailerLite after component mounts
+    if (window.ml) {
+      window.ml('show', {
+        campaign: '1367444',
+      });
+    }
+  }, []);
+
   return (
     <>
-      <Script id="mailerlite" strategy="afterInteractive">
+      <Script 
+        id="mailerlite" 
+        strategy="afterInteractive"
+        onLoad={() => {
+          // Initialize MailerLite after script loads
+          if (window.ml) {
+            window.ml('show', {
+              campaign: '1367444',
+            });
+          }
+        }}
+      >
         {`
           (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
           .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
