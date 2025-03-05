@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://parablelist.com
+
+# Sitemaps
+Sitemap: https://parablelist.com/sitemap.xml
