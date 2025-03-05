@@ -6,9 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: '/parable-list', // Replace REPO-NAME with your repository name
-  // Comment out basePath for local development
-  // basePath: '/parablelist'
+  // Remove basePath since we're using a custom domain
 }
 
 const withMDX = require('@next/mdx')({
